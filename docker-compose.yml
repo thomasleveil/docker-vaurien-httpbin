@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  vaurien-http:
+    build: .
+    labels:
+      traefik.enable: "true"
+      traefik.vaurien.port: 80
+      traefik.vaurien.frontend.rule: Host:vaurien.docker.localhost
+      traefik.httpbin.port: 9000
+      traefik.httpbin.frontend.rule: Host:httpbin.vaurien.docker.localhost
