@@ -18,4 +18,10 @@ RUN apk add --no-cache \
 
 COPY ./assets /
 CMD [ "/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf" ]
+
+# vaurien http proxy port
 EXPOSE 80
+
+# httpin port
+EXPOSE 9000
+
